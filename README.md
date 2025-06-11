@@ -8,5 +8,5 @@ To install necessary dependencies run `pip install -r requirements.txt`
 `python main.py` to start FastAPI server
 
 ### API Documentation 
-Go tp `http://127.0.0.1:8080/docs` to view api documentation
+Go to `http://127.0.0.1:8080/docs` to view api documentation
 
