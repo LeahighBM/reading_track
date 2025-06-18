@@ -4,8 +4,18 @@ from jsonschema import validate, ValidationError
 import csv
 import json
 import datetime 
+from pydantic import BaseModel
+
+class Wishlist_Book(BaseModel):
+    title: str
+    author: str
+    genre: str | None = None
+    pages: int | None = None
 
 app = FastAPI()
+
+
+
 
 @app.get("/")
 async def root():
@@ -51,6 +61,10 @@ async def add_to_wishlist(request: Request, response: Response):
 
     response.status_code = status.HTTP_201_CREATED
     return {"message": "item added to wishlist"}
+
+@app.post("/wishlist2")
+async def base_model_wishlist(book: Wishlist_Book):
+    return book
 
 @app.get("/wishlist")
 async def get_wishlist(request: Request, response: Response):
