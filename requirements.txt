@@ -1,5 +1,3 @@
 fastapi
-jsonschema
-requests
 uvicorn
-json
+sqlalchemy
