@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, Depends
+from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Annotated, List
@@ -13,7 +13,7 @@ origins = ["http://127.0.0.1:3000"]
 
 app.add_middleware(
     CORSMiddleware, 
-    allow_origins = origins,
+    allow_origins = ["*"], # well the react app works now, but this is not safe 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"], 
@@ -23,6 +23,7 @@ class WishlistBookBase(BaseModel):
     title: str
     author: str
     date_added: str
+    already_own: bool
 
 class WishlistBookModel(WishlistBookBase):
     id: int

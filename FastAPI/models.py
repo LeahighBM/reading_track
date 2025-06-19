@@ -1,5 +1,5 @@
 from database import Base
-from sqlalchemy import Column, Integer, String, Float, Boolean
+from sqlalchemy import Column, Integer, String, Boolean
 
 
 class Wishlist(Base):
@@ -9,3 +9,4 @@ class Wishlist(Base):
     title = Column(String)
     author = Column(String)
     date_added = Column(String)
+    already_own = Column(Boolean)
