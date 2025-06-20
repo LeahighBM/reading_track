@@ -59,21 +59,21 @@ const App = () => {
             <label htmlFor="title" className="form-label">
               Title
             </label>
-            <input type="text" className="form-control" id="title" name="title" onChange={handleInputChange} value={formData.title}/>
+            <input type="text" className="form-control" id="title" name="title" onChange={handleInputChange} placeholder="Moby Dick" value={formData.title}/>
           </div>
 
           <div className="mb-3">
             <label htmlFor="author" className="form-label">
               Author
             </label>
-            <input type="text" className="form-control" id="author" name="author" onChange={handleInputChange} value={formData.author}/>
+            <input type="text" className="form-control" id="author" name="author" onChange={handleInputChange} placeholder="Herman Melville" value={formData.author}/>
           </div>
 
           <div className="mb-3">
             <label htmlFor="date_added" className="form-label">
               Date Added
             </label>
-            <input type="text" className="form-control" id="date_added" name="date_added" onChange={handleInputChange} value={formData.date_added}/>
+            <input type="text" className="form-control" id="date_added" name="date_added" onChange={handleInputChange} placeholder="YYYY-MM-DD" value={formData.date_added}/>
           </div>
 
           <div className="mb-3">
