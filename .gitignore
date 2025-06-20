@@ -196,4 +196,5 @@ cython_debug/
 *.csv
 *.db
 package-lock.json
+node_modules
 
