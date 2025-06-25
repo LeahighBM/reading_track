@@ -1,2 +1,2 @@
 pip install -r requirements.txt
-npm install
+npm --prefix React/reading-track-app install
